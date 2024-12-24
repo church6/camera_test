@@ -1,0 +1,15 @@
+[package]
+name = "rlist"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.4", features = ["derive"] }
+
+[profile.release]
+strip = true
+codegen-units = 1
+opt-level = 3
+panic = "abort"
+lto = "fat"
+
